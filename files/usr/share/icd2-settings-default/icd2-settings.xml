@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gconfschemafile xmlns:confml="http://www.s60.com/xml/confml/2">
+  <schemalist>
+    <schema>
+      <applyto>/system/osso/connectivity/policy/modules</applyto>
+      <key>/schemas/system/osso/connectivity/policy/modules</key>
+      <owner>icd</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[libicd_policy_merge.so,libicd_policy_ask.so,libicd_policy_any.so,libicd_policy_change.so,libicd_policy_add.so,libicd_policy_always_online.so,libicd_policy_one.so,libicd_policy_restart.so,libicd_policy_nw_disconnect.so]</default>
+      <locale name="C">
+        <long>Name of the policy modules in priority order</long>
+      </locale>
+    </schema>
+    <schema>
+      <applyto>/system/osso/connectivity/network_type/auto_connect</applyto>
+      <key>/schemas/system/osso/connectivity/network_type/auto_connect</key>
+      <owner>icd</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[WLAN_INFRA]</default>
+      <locale name="C">
+        <long>Comma separated list of network types to connect to automatically</long>
+      </locale>
+    </schema>
+    <schema>
+      <applyto>/system/osso/connectivity/network_type/change_while_connected</applyto>
+      <key>/schemas/system/osso/connectivity/network_type/change_while_connected</key>
+      <owner>icd</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <long>Automatic connection switch</long>
+      </locale>
+    </schema>
+    <schema>
+      <applyto>/system/osso/connectivity/network_type/search_interval</applyto>
+      <key>/schemas/system/osso/connectivity/network_type/search_interval</key>
+      <owner>icd</owner>
+      <type>int</type>
+      <default>600</default>
+      <locale name="C">
+        <long>Search interval in seconds while not connected. When no connection are active avaiable connections are searched and autoconnected regularly. This specifies the interval between scans and measured in seconds. Zero disables the feature.</long>
+      </locale>
+    </schema>
+    <schema>
+      <applyto>/system/osso/connectivity/IAP/flightmode_wlan</applyto>
+      <key>/schemas/system/osso/connectivity/IAP/flightmode_wlan</key>
+      <owner>icd</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <long>Whether the Wireless LAN can be used during flightmode</long>
+      </locale>
+    </schema>
+    <schema>
+      <applyto>/system/osso/connectivity/IAP/wlan_tx_power</applyto>
+      <key>/schemas/system/osso/connectivity/IAP/wlan_tx_power</key>
+      <owner>icd</owner>
+      <type>int</type>
+      <default>8</default>
+      <locale name="C">
+        <long>Transmit power level for WLAN chip</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>
