@@ -1,0 +1,15 @@
+Source: icd2-settings-default
+Section: misc
+Priority: optional
+Maintainer: Ivan J. <parazyd@dyne.org>
+Build-Depends: debhelper (>= 9),
+Standards-Version: 3.7.2
+
+Package: icd2-settings-default
+Architecture: all
+Depends: ${shlibs:Depends}, gconf2
+Conflicts: icd2-settings-variant
+Replaces: icd2-settings-variant
+Provides: icd2-settings-variant
+Description: Defines icd2 settings
+ This package contains configuration settings for icd2

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+	if [ -f /usr/share/icd2-settings-default/icd2-settings.xml ]; then
+	    HOME=/root GCONF_CONFIG_SOURCE=xml::/etc/gconf/gconf.xml.defaults \
+		gconftool-2 --makefile-install-rule /usr/share/icd2-settings-default/icd2-settings.xml
+	fi
+fi
+
+
+
